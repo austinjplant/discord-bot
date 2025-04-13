@@ -8,8 +8,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "\"# discord-bot\"",
   "dependencies": {
-    "discord.js": "^14.18.0"
-  }
+    "discord.js": "^14.18.0",
+    "express": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinjplant/discord-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/austinjplant/discord-bot/issues"
+  },
+  "homepage": "https://github.com/austinjplant/discord-bot#readme"
 }
