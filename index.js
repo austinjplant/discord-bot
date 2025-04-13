@@ -1,9 +1,12 @@
+require('dotenv').config(); // Load environment variables
+
 const { Client, GatewayIntentBits } = require('discord.js'); // Declare only once
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 });
 
-const token = 'MTM2MDkzODc1MjUwNzM4Mzk0NQ.G8nOHT.pQffCP5jNeDxv1VsO5WxnuG5ZikVg0D-RG9rl8'; // Replace this with your actual bot token
+// Bot login with the token from the .env file
+client.login(process.env.DISCORD_TOKEN);
 
 client.once('ready', () => {
     console.log(`✅ Logged in as ${client.user.tag}`);
@@ -101,7 +104,7 @@ client.on('messageCreate', async message => {
 7. **!rfipoll** - creates a 50/50 poll in #polls
 
 Feel free to try these out and let me know if you need help!`;
-        
+
         message.channel.send(helpMessage);
     }
 
@@ -317,8 +320,3 @@ client.on('messageCreate', async (message) => {
         }
     }
 });
-
-// Bot login
-client.login(token);
-
-client.login(token); // Keep the bot login at the end of the file
